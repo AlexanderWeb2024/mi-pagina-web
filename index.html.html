@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexander Mieres - Desarrollador Web</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #ffd700;
+            font-size: 2.3em;
+            margin-bottom: 20px;
+        }
+        .foto {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #ffd700;
+            margin: 0 auto 20px auto;
+            background: #ddd;
+        }
+        .info {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+        button {
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 1.1em;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="foto"></div>
+        
+        <h1>Alexander Mieres</h1>
+        
+        <div class="info">
+            <p><strong>🚀 Futuro Desarrollador Web Full Stack</strong></p>
+        </div>
+        
+        <div class="info">
+            <p><strong>🎯 Mi Meta:</strong> Convertirme en Desarrollador Web Full Stack</p>
+        </div>
+        
+        <div class="info">
+            <p><strong>📅 Fecha:</strong> <span id="fecha"></span></p>
+            <p><strong>⏰ Hora:</strong> <span id="hora"></span></p>
+        </div>
+
+        <button onclick="mostrarMensaje()">💫 ¡Motívame!</button>
+    </div>
+
+    <script>
+        // Fecha y hora actual
+        function actualizarTiempo() {
+            const opciones = { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            };
+            document.getElementById('fecha').textContent = 
+                new Date().toLocaleDateString('es-ES', opciones);
+            document.getElementById('hora').textContent = 
+                new Date().toLocaleTimeString('es-ES');
+        }
+        
+        // Mensaje motivador
+        function mostrarMensaje() {
+            alert("¡Vas por excelente camino! Sigue programando 🚀");
+        }
+        
+        // Iniciar
+        actualizarTiempo();
+        setInterval(actualizarTiempo, 1000);
+    </script>
+</body>
+</html>
